@@ -1,0 +1,679 @@
+{% load static %}
+
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CheapFlightsFirst- Book Cheap Flight Tickets</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+	  
+		<!-- datepicker css -->
+	   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <!-- bootstrap css -->
+	   <link rel="stylesheet" href="{% static 'demo/css/bootstrap.min.css' %}">
+      <!-- style css -->
+	  	<link rel="stylesheet" href="{% static 'demo/css/style.css' %}">
+      <!-- Responsive-->
+	  	<link rel="stylesheet" href="{% static 'demo/css/responsive.css' %}">
+      <!-- fevicon -->
+	   <link rel="icon" href="{% static 'demo/images/fevicon.png' type='image/gif'%}" />
+      <!-- Scrollbar Custom CSS -->
+	  	<link rel="stylesheet" href="{% static 'demo/css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <!-- owl stylesheets --> 
+	  	<link rel="stylesheet" href="{% static 'demo/css/owl.carousel.min.css' %}">
+	  	<link rel="stylesheet" href="{% static 'demo/css/owl.theme.default.min.css' %}">
+
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	  
+	  <link rel="stylesheet" type="text/css" href="{% static 'demo/style.css' %}">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#inputOrigin").autocomplete({
+                source: "{% url 'origin_airport_search'%}",
+                minLength: 1,
+                delay: 200,
+            });
+        });
+    </script>
+    <script>
+    $(document).ready(function () {
+        $("#inputDestination").autocomplete({
+            source: "{% url 'destination_airport_search'%}",
+            minLength: 1,
+            delay: 200,
+        });
+    });
+</script>
+	  
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+		 <div class="loader"><img src="{% static 'demo/images/loading.gif'%}" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="header_white_section">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="header_information">
+                           <ul>
+                              <li><img src="{% static 'demo/images/1.png'%}" alt="#"/>30 N. Gould St,Sheridan, WY 82801</li>
+                              <li><img src="{% static 'demo/images/2.png'%}" alt="#"/>(888) 905-8260</li>
+                              <li><img src="{% static 'demo/images/2.png'%}" alt="#"/> info@cheapflightsfirst.com</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo"> <a href="index.html"><img src="{% static 'demo/images/logo.svg'%}" class="header-logo" alt="#"></a> </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="menu-area">
+                        <div class="limit-box">
+                           <nav class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li class="active"> <a href="#">Home</a> </li>
+                                 <li> <a href="#about">About</a> </li>
+                                 <li><a href="#travel">Travel</a></li>
+                                 <li><a href="#blog">Blog</a></li>
+                                 <li><a href="#contact">Contact Us</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div><!-- end header inner -->
+      </header>
+      <!-- end header -->
+	  
+
+		<section class="page-banner pt-5 pb-5" style="background-image:url(/static/demo/images/banner2.jpg)">
+			<div class="banner-overlay"></div>
+			<div class="container">
+            <div class="row">
+               <div class="col-md-12 col-12">
+                  <h1>Flights to Atlanta</h1>
+               </div>
+            </div><!--/row-->      
+         </div>
+		</section>
+
+      <section class="content-box pt-5 pb-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h2>Board your flight to Atlanta</h2>
+                  <p>Atlanta city is the state capital of Georgia in the United States. It is the United States' ninth-largest metropolitan region and is the 38th most populous city in the United States. Atlanta is also known as “City of Trees”.</p>
+                  <p>The unique thing about Atlanta is that is rich in man-made and nature structures. You can see stunning, towering skylines, as well as rich, green greenery and vibrant flora. The tourist spots that Atlanta is known for are; Millennium Gate Museum at Atlantic Station, National Center for Civil and Human Rights, College Football Hall of Fame and Trap Music Museum.</p>
+                  <p>Expected budget to travel in Atlanta can be $136 per day. Your budget can go up or down according to your lifestyle and spending nature.</p>
+                  <p>Best ways to get around the Atlanta without owning your own vehicle are: Atlanta Checker Cab, Yellow Cab of Atlanta, Uber Cab, Lyft Cab, Rented Car, MARTA - Rail, MARTA – Bus and Streetcar. You can choose your conveyance according to your comfort and budget.</p>
+                  <p>Best Time to visit Atlanta is from March to May, around this time the weather is mild and great to enjoy outdoor activities. Cheapest month to book flights to is August.</p>
+
+                  <h3>Airports in Atlanta</h3>
+                  <p>The major airport that serves the city is <strong> Hartsfield–Jackson Atlanta International Airport (ATL). </strong> There are more airports in the area that you can also consider, here is the list:</p>
+
+                  <ul class="list">
+                     <li>DeKalb–Peachtree Airport, Atlanta / Chamblee (PDK)</li>
+                     <li>Fulton County Executive Airport (Charlie Brown Field), Atlanta (FTY)</li>
+                     <li>Cobb County International Airport (McCollum Field), Atlanta / Kennesaw (RYY)</li>
+                     <li>Gwinnett County Airport (Briscoe Field), Atlanta / Lawrenceville (LZU)</li>
+                     <li> Covington Municipal Airport, Atlanta / Covington (CVC)</li>
+                     <li>Paulding Northwest Atlanta Airport, Atlanta / Dallas (PUJ)</li>
+                     <li>Atlanta Speedway Airport, Atlanta / Hampton (HMP)</li>
+                     <li>Newnan–Coweta County Airport, Atlanta / Newnan (CCO)</li>
+                     <li>Atlanta Regional Airport, Atlanta / Peachtree City (FFC)</li>
+                  </ul>
+
+                  <h3>Airlines that offer flights to Atlanta</h3>
+                  <p>Here are the best and comfortable airlines that serve the city:</p>
+                  <ul class="list">
+                     <li>American Airlines</li>
+                     <li>United Airlines</li>
+                     <li>Delta Air Lines</li>
+                     <li>JetBlue Airlines</li>
+                     <li>Spirit Airlines</li>
+                     <li>Frontier Airlines</li>
+                     <li>Southwest Airlines</li>
+                  </ul>
+               </div>
+            </div><!--/row-->
+
+            <div class="row">
+               <div class="col-md-12 col-12">
+                  <h3>Flights to Atlanta</h3>
+                  <p>There are many airlines that offer flights to Atlanta from almost every place in United States of America.</p>
+                  <p>For reference below we have given some of the most routes taken from major places in United States to Atlanta; along with their estimated prices from good, comfortable and affordable airlines:</p>
+               </div>
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from New York:</h4>
+                     <p>American Airlines – price starts from $ 77</p>
+                     <p>Delta Airlines – price starts from $ 128</p>
+                     <p>United Airlines – price starts from $ 46</p>
+                     <p>Spirit Airlines – price starts from $ 43</p>
+                     <p>JetBlue Airlines – price starts from $ 61</p>
+                     <p>Frontier Airlines – price starts from $ 72</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Chicago:</h4>
+                     <p>American Airlines – price starts from $ 112</p>
+                     <p>Delta Airlines – price starts from $ 104</p>
+                     <p>United Airlines – price starts from $ 129</p>
+                     <p>JetBlue Airlines – price starts from $ 213</p>
+                     <p>Boutique Air – price starts from $ 334</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Denver:</h4>
+                     <p>American Airlines – price starts from $ 188</p>
+                     <p>Delta Airlines – price starts from $ 149</p>
+                     <p>United Airlines – price starts from $ 238</p>
+                     <p>Spirit Airlines – price starts from $ 185</p>
+                     <p>JetBlue Airlines – price starts from $ 274</p>
+                     <p>Frontier Airlines – price starts from $ 204</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Los Angeles:</h4>
+                     <p>American Airlines – price starts from $ 270</p>
+                     <p>Delta Airlines – price starts from $ 310</p>
+                     <p>United Airlines – price starts from $ 270</p>
+                     <p>Spirit Airlines – price starts from $ 194</p>
+                     <p>JetBlue Airlines – price starts from $ 321</p>
+                     <p>Alaska Airlines – price starts from $ 407</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Miami:</h4>
+                     <p>American Airlines – price starts from $ 111</p>
+                     <p>Delta Airlines – price starts from $ 109</p>
+                     <p>United Airlines – price starts from $ 155</p>
+                     <p>Spirit Airlines – price starts from $ 65</p>
+                     <p>JetBlue Airlines – price starts from $ 170</p>
+                     <p>Frontier Airlines – price starts from $ 43</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Boston:</h4>
+                     <p>American Airlines – price starts from $ 147</p>
+                     <p>Delta Airlines – price starts from $ 149</p>
+                     <p>United Airlines – price starts from $ 105</p>
+                     <p>Spirit Airlines – price starts from $ 90</p>
+                     <p>JetBlue Airlines – price starts from $ 132</p>
+                     <p>Frontier Airlines – price starts from $ 80</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Nashville:</h4>
+                     <p>American Airlines – price starts from $ 160</p>
+                     <p>Delta Airlines – price starts from $ 152</p>
+                     <p>United Airlines – price starts from $ 120</p>
+                     <p>Spirit Airlines – price starts from $ 100</p>
+                     <p>JetBlue Airlines – price starts from $ 227</p>
+                     <p>Frontier Airlines – price starts from $ 137</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Las Vegas:</h4>
+                     <p>American Airlines – price starts from $ 308</p>
+                     <p>Delta Airlines – price starts from $ 299</p>
+                     <p>United Airlines – price starts from $ 290</p>
+                     <p>Spirit Airlines – price starts from $ 196</p>
+                     <p>Alaska Airlines – price starts from $ 390</p>
+                     <p>Frontier Airlines – price starts from $ 252</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Dallas:</h4>
+                     <p>American Airlines – price starts from $ 147</p>
+                     <p>Delta Airlines – price starts from $ 139</p>
+                     <p>United Airlines – price starts from $ 212</p>
+                     <p>Spirit Airlines – price starts from $ 87</p>
+                     <p>JetBlue Airlines – price starts from $ 122</p>
+                     <p>Frontier Airlines – price starts from $ 80</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Seattle:</h4>
+                     <p>American Airlines – price starts from $ 300</p>
+                     <p>Delta Airlines – price starts from $ 409</p>
+                     <p>United Airlines – price starts from $ 371</p>
+                     <p>Alaska Airlines – price starts from $ 409</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Washington D. C.:</h4>
+                     <p>American Airlines – price starts from $ 129</p>
+                     <p>Delta Airlines – price starts from $ 119</p>
+                     <p>United Airlines – price starts from $ 129</p>
+                     <p>Spirit Airlines – price starts from $ 62</p>
+                     <p>JetBlue Airlines – price starts from $ 187</p>
+                     <p>Frontier Airlines – price starts from $ 57</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Detroit:</h4>
+                     <p>American Airlines – price starts from $ 181</p>
+                     <p>Delta Airlines – price starts from $ 288</p>
+                     <p>United Airlines – price starts from $ 182</p>
+                     <p>Spirit Airlines – price starts from $ 111</p>
+                     <p>JetBlue Airlines – price starts from $ 228</p>
+                     <p>Frontier Airlines – price starts from $ 255</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Charlotte:</h4>
+                     <p>American Airlines – price starts from $ 279</p>
+                     <p>Delta Airlines – price starts from $ 348</p>
+                     <p>United Airlines – price starts from $ 252</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Phoenix:</h4>
+                     <p>American Airlines – price starts from $ 281</p>
+                     <p>Delta Airlines – price starts from $ 382</p>
+                     <p>United Airlines – price starts from $ 429</p>
+                     <p>Spirit Airlines – price starts from $ 354</p>
+                     <p>JetBlue Airlines – price starts from $ 323</p>
+                     <p>Frontier Airlines – price starts from $ 495</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Alaska:</h4>
+                     <p>American Airlines – price starts from $ 524</p>
+                     <p>Delta Airlines – price starts from $ 402</p>
+                     <p>United Airlines – price starts from $ 303</p>
+                     <p>Alaska Airlines – price starts from $ 481</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Portland:</h4>
+                     <p>American Airlines – price starts from $ 358</p>
+                     <p>Delta Airlines – price starts from $ 322</p>
+                     <p>United Airlines – price starts from $ 358</p>
+                     <p>Spirit Airlines – price starts from $ 311</p>
+                     <p>JetBlue Airlines – price starts from $ 433</p>
+                     <p>Alaska Airlines – price starts from $ 358</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from New Orleans:</h4>
+                     <p>American Airlines – price starts from $ 209</p>
+                     <p>Delta Airlines – price starts from $ 249</p>
+                     <p>United Airlines – price starts from $ 322</p>
+                     <p>Spirit Airlines – price starts from $ 147</p>
+                     <p>Frontier Airlines – price starts from $ 67</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from San Francisco:</h4>
+                     <p>American Airlines – price starts from $ 299</p>
+                     <p>Delta Airlines – price starts from $ 283</p>
+                     <p>United Airlines – price starts from $ 270</p>
+                     <p>Alaska Airlines – price starts from $ 337</p>
+                     <p>JetBlue Airlines – price starts from $ 184</p>
+                     <p>Frontier Airlines – price starts from $ 180</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Philadelphia:</h4>
+                     <p>American Airlines – price starts from $ 117</p>
+                     <p>Delta Airlines – price starts from $ 199</p>
+                     <p>United Airlines – price starts from $ 200</p>
+                     <p>Spirit Airlines – price starts from $ 31</p>
+                     <p>JetBlue Airlines – price starts from $ 99</p>
+                     <p>Frontier Airlines – price starts from $ 36</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-4 col-12">
+                  <div class="prz-box">
+                     <h4>Flights to Atlanta from Hawaii:</h4>
+                     <p>American Airlines – price starts from $ 486</p>
+                     <p>Delta Airlines – price starts from $ 458</p>
+                     <p>United Airlines – price starts from $ 469</p>
+                     <p>Hawaiian Airlines – price starts from $ 443</p>
+                     <p>JetBlue Airlines – price starts from $ 443</p>
+                     <p>Alaska Airlines – price starts from $ 631</p>
+                  </div>
+               </div><!--/prz-box-->
+               <div class="col-md-12 col-12">
+                  <h4>**Note - Prices may differ while actual booking.</h4>
+
+                  <h4>Tourist attractions in Atlanta</h4>
+                  <p>There is so much that you can see in Atlanta, many incredible and unique places. Here is the list of tourist attractions of the city:</p>
+
+                  <ul class="list">
+                     <li>Zoo Atlanta</li>
+                     <li>SkyView Atlanta</li>
+                     <li>Piedmont Park</li>
+                     <li>Turner Field</li>
+                     <li>Atlanta BeltLine</li>
+                     <li>Krog Street Market</li>
+                     <li>Georgia Aquarium</li>
+                     <li>Oakland Cemetery</li>
+                     <li>Ponce City Market</li>
+                     <li>Atlanta History Center</li>
+                     <li>High Museum of Art</li>
+                     <li>World of Coca-Cola</li>
+                     <li>Stone Mountain Park</li>
+                     <li>Mercedes Benz Stadium</li>
+                     <li>Center for Puppetry Arts</li>
+                     <li>Atlanta Botanical Garden</li>
+                     <li>Michael C. Carlos Museum</li>
+                     <li>College Football Hall of Fame</li>
+                     <li>Jimmy Carter Library & Museum</li>
+                     <li>Center for Civil and Human Rights</li>
+                     <li>Movie or Performance at the Fox Theatre</li>
+                     <li>Fernbank Museum of Natural History</li>
+                     <li>Martin Luther King Jr National Historic Site</li>
+                     <li>Dancing Fountains at Centennial Olympic Park</li>
+                  </ul>
+
+                  <h4>Must try these dishes in Atlanta</h4>
+                  <p>The best part about any trip is visiting incredible places and try new food dishes. So as for trying food dishes, below is the list of must try food in Atlanta:</p>
+                  <ul class="list">
+                     <li>Pizza at Antico</li>
+                     <li>A Steak at Bones</li>
+                     <li>Chicken 65 at Zyka</li>
+                     <li>Sesame Fries at Takorea</li>
+                     <li>Acai Bowl at Kale Me Crazy</li>
+                     <li>Any Sandwich at Sawicki’s</li>
+                     <li>A Popsicle at King of Pops</li>
+                     <li>The Oshi Roll at Miso Izakaya</li>
+                     <li>Fried Chicken at Mary Mac’s</li>
+                     <li>A Hotdog at The Varsity</li>
+                     <li>A Burger at The Vortex</li>
+                     <li>Eggs Benedict at West Egg Café</li>
+                     <li>Spicy Tuna Crispy Rice at Umi</li>
+                     <li>Grilled Cheese at Folk Art</li>
+                     <li>Nutella Pancakes at Rise-n-Dine</li>
+                     <li>Beet-cured Salmon at Buttermilk Kitchen</li>
+                     <li>S’more Bread Pudding at Saltyard</li>
+                     <li>Texas Fries at Fox Bros. Bar-B-Q</li>
+                     <li>A Cheeseburger at Holeman and Finch</li>
+                     <li>An Avenue A Bagel at The General Muir</li>
+                     <li>Chicken Parm at Gio’s Chicken Amalfitano</li>
+                     <li>Chicken And Waffles at 10th & Piedmont</li>
+                     <li>Crispy Brussel Sprouts at Yeah! Burger</li>
+                     <li>Bubble Tea at Sweet Hut Bakery & Cafe</li>
+                     <li>Vegetarian Platter at Desta Ethiopian Kitchen</li>
+                     <li>Lobster Macaroni and Cheese at Poor Calvin’s</li>
+                     <li>Brown Butter Almond Brittle at Jeni’s Splendid Ice Creams</li>
+                     <li>Maple Bacon Cheddar Doughnut at Sublime Doughnuts</li>
+                  </ul>
+
+                  <h4>Souvenirs you can buy in Atlanta</h4>
+                  <p>Here are some things that you can buy in Atlanta as gifts or souvenirs:</p>
+                  <ul>
+                     <li>Pickled Peaches</li>
+                     <li>Heirloom Gifts</li>
+                     <li>Snow Globe</li>
+                     <li>Keychains</li>
+                     <li>Shot Glass</li>
+                     <li>Honey And Bee Products</li>
+                     <li>Always Atlanta Pennant</li>
+                     <li>The Collective Atlanta Landmark Coasters</li>
+                     <li>Mama Bath And Body Neighborhood Soaps</li>
+                     <li>CACAO Atlanta Chocolate Company Limited-Edition Chocolate</li>
+                  </ul>
+
+                  <h4>Beaches near Atlanta</h4>
+                  <p>The city does not have beaches, but to enjoy beach and its associated activities there are some beautiful beaches near Atlanta where you can go. Below are the names of some stunning beaches near Atlanta:</p>
+                  <ul class="list">
+                     <li>Cauble Park — Acworth</li>
+                     <li>Myrtle Beach — Myrtle Beach</li>
+                     <li>North Beach — Tybee Island</li>
+                     <li>Seaside — Santa Rosa Beach</li>
+                     <li>Perdido Beach — Pensacola</li>
+                     <li>East Beach — St. Simons Island</li>
+                     <li>Driftwood Beach — Jekyll Island</li>
+                     <li>Henderson Beach State Park — Destin</li>
+                     <li>Coligny Beach Park — Hilton Head Island</li>
+                     <li>Red Top Mountain State Park — Acworth</li>
+                     <li>Kiawah Beachwalker Park — Kiawah Island</li>
+                     <li>Gulf Islands National Seashore — Gulf Breeze</li>
+                     <li>Hunting Island State Park — St. Helena Island</li>
+                     <li>Huntington Beach State Park — Murrells Inlet</li>
+                     <li>St. George Island State Park — St. George Island</li>
+                  </ul>
+
+                  <h4>Hiking trails in Atlanta</h4>
+                  <p>Atlanta has mountains and peaks which means it has some amazing hiking trails as well. All these trails have jaw dropping scenic views and adventurous activities. Here is the list of best hiking trails in the city:</p>
+                  <ul class="list">
+                     <li>Blood Mountain</li>
+                     <li>Vickery Creek Trail</li>
+                     <li>Sope Creek Trail</li>
+                     <li>Tennessee Rock Trail</li>
+                     <li>East Palisades Trail</li>
+                     <li>Island Ford Loop Trail</li>
+                     <li>Arabia Mountain Top Trail</li>
+                     <li>Sweetwater Creek Red Trail</li>
+                     <li>Brasstown Bald / Arkaquah Trail</li>
+                     <li>Cascade Springs Nature Preserve</li>
+                     <li>Sawnee Mountain Indian Seats Trail</li>
+                     <li>Pine Mountain Trail (Allatoona Lake)</li>
+                     <li>Len Foote Hike Inn & Amicalola Falls</li>
+                     <li>Stone Mountain Walk Up & Cherokee Trail Loop</li>
+                  </ul>
+
+                  <h4>Affordable accommodation in Atlanta</h4>
+                  <p>Sometimes finding an affordable accommodation can be tricky, so we have some good hotel names for you with their approximate prices. Here are the hotels that you can consider for stay when you are in the city:</p>
+                  <ul class="list">
+                     <li>Rodeway Inn – Price starts from $ 52</li>
+                     <li>Clarion Hotel – Price starts from $ 53</li>
+                     <li>Travelodge by Wyndham – Price starts from $ 58</li>
+                     <li>Red Roof Inn – Price starts from $ 58</li>
+                     <li>Ramada Plaza by Wyndham – Price starts from $ 59</li>
+                     <li>Home Towne Studios by Red Roof – Price starts from $ 59</li>
+                     <li>Fulton Inn – Price starts from $ 60</li>
+                     <li>Econo Lodge – Price starts from $ 61</li>
+                     <li>Days Inn by Wyndham – Price starts from $ 62</li>
+                     <li>Budgetel Inns & Suites – Price starts from $ 62</li>
+                     <li>Howard Johnson by Wyndham – Price starts from $ 64</li>
+                     <li>Country Hearth Inn & Suites Marietta – Price starts from $ 65</li>
+                     <li>Motel 6 – Price starts from $ 65</li>
+                     <li>Quality Inn & Suites – Price starts from $ 67</li>
+                     <li>Microtel Inn & Suites by Wyndham – Price starts from $ 71</li>
+                     <li>Baymont by Wyndham – Price starts from $ 72</li>
+                     <li>Country Inn & Suites by Radisson – Price starts from $ 76</li>
+                     <li>La Quinta by Wyndham – Price starts from $ 76</li>
+                     <li>Hawthorn Suites by Wyndham – Price starts from $ 76</li>
+                     <li>Cheshire Motor Inn – Price starts from $ 80</li>
+                     <li>Savannah Suites – Price starts from $ 84</li>
+                     <li>Super 8 by Wyndham – Price starts from $ 85</li>
+                     <li>Wood Spring Suites – Price starts from $ 85</li>
+                     <li>Extended Stay America Suite – Price starts from $ 87</li>
+                     <li>Hampton Inn & Suites – Price starts from $ 88</li>
+                     <li>Home2 Suites by Hilton – Price starts from $ 90</li>
+                     <li>Fairfield Inn & Suites by Marriott – Price starts from $ 93</li>
+                     <li>Sheraton Hotel & Suites – Price starts from $ 95</li>
+                     <li>Wingate by Wyndham – Price starts from $ 98</li>
+                     <li>Holiday Inn Express Hotel & Suites – Price starts from $ 100</li>
+                     <li>Courtyard by Marriott – Price starts from $ 100</li>
+                  </ul>
+
+                  <h5>** Note - Prices may differ while actual booking.</h5>
+               </div>
+            </div><!--/row-->
+
+         </div>
+      </section><!--/content-box-->
+	
+
+      <!-- footer -->
+      <footer>
+         <div id="contact" class="footer">
+            <div class="container">
+               <div class="row pdn-top-30">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                     <ul class="location_icon">
+                        <li> <a href="#"><img src="{% static 'demo/icon/facebook.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/Twitter.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/linkedin.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/instagram.png'%}"></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>CONTACT US</h3>
+                        <span>30 N. Gould St.<br>
+                        Sheridan, WY, 82801<br>
+                        (888) 905-8260</span>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>ADDITIONAL LINKS</h3>
+                        <ul class="link">
+                           <li> <a href="#">About us</a></li>
+                           <li> <a href="#">Terms and conditions</a></li>
+                           <li> <a href="#"> Privacy policy</a></li>
+                           <li> <a href="#">News</a></li>
+                           <li> <a href="#"> Contact us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3> Contact</h3>
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <input class="Newsletter" placeholder="Name" type="text">
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <input class="Newsletter" placeholder="Email" type="text">
+                           </div>
+                           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                              <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
+                           </div>
+                        </div>
+                        <button class="Subscribe">Submit</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <p>Copyright 2022 All Right Reserved By <a href="#">CheapFlightsFirst LLC</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+		<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<!-- date-picker -->
+	  
+      <script src="{% static 'demo/js/jquery.min.js'%}"></script>
+      <script src="{% static 'demo/js/popper.min.js'%}"></script>
+      <script src="{% static 'demo/js/bootstrap.bundle.min.js'%}"></script>
+      <script src="{% static 'demo/js/jquery-3.0.0.min.js'%}"></script>
+      <script src="{% static 'demo/js/plugin.js'%}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'demo/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+      <script src="{% static 'demo/js/custom.js'%}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'demo/js/owl.carousel.js'%}"></script>
+      <script>
+         $(document).ready(function() {
+           var owl = $('.owl-carousel');
+           owl.owlCarousel({
+             margin: 10,
+             nav: true,
+             loop: true,
+             responsive: {
+               0: {
+                 items: 1
+               },
+               600: {
+                 items: 2
+               },
+               1000: {
+                 items: 3
+               }
+             }
+           })
+         })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $("#form_id").on("submit", function (e) {
+        e.preventDefault(); //stop submit event
+        var self = $(this);
+        var originGiven = $("#inputOrigin").val();
+        $("#inputOrigin").val(originGiven.slice(0,3));
+        var destinationGiven = $("#inputDestination").val();
+        $("#inputDestination").val(destinationGiven.slice(0,3));
+        $("#form_id").off("submit");
+        self.submit();
+    });
+    </script>
+	
+	<script>
+	 $(function() {
+		$( "#idDeparturedate" ).datepicker({
+		   appendText:"(dd-mm-yy)",
+			dateFormat:"dd-mm-yy"
+		});
+	 $(function() {
+		$( "#idReturndate" ).datepicker();
+		appendText:"(dd-mm-yy)",
+		dateFormat:"dd-mm-yy"
+	 });
+  </script>
+	
+     
+   </body>
+   
+</html>
