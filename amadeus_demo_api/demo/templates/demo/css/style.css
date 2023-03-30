@@ -2272,7 +2272,7 @@ ul.location_icon span {
 }
 /** slider arrow **/
 .home-banner {
-	
+	background-image:url(/static/demo/images/banner.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
