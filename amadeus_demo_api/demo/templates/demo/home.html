@@ -14,6 +14,12 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+	  
+		<!-- datepicker css -->
+		<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      
+	  
       <!-- bootstrap css -->
 	     <link rel="stylesheet" href="{% static 'demo/css/bootstrap.min.css' %}">
       <!-- style css -->
@@ -149,13 +155,13 @@
 							  <label for="inputDestination">To</label>
 						  </div>
 						  <div class="form-label-group">
-							  <input type="date" name="Departuredate" id="idDeparturedate"
+							  <input type="text" name="Departuredate" id="idDeparturedate"
 									 class="form-control" placeholder="Departure Date" required>
 							  <label for="idDeparturedate">Departure Date</label>
 						  </div>
 
 						  <div class="form-label-group">
-							  <input type="date" name="Returndate" id="idReturndate"
+							  <input type="text" name="Returndate" id="idReturndate"
 									 class="form-control" placeholder="Return Date">
 							  <label for="idReturndate">Return Date</label>
 						  </div>
@@ -433,6 +439,10 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
+		<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<!-- date-picker -->
+	  
       <script src="{% static 'demo/js/jquery.min.js'%}"></script>
       <script src="{% static 'demo/js/popper.min.js'%}"></script>
       <script src="{% static 'demo/js/bootstrap.bundle.min.js'%}"></script>
@@ -478,6 +488,18 @@
         self.submit();
     });
     </script>
+	
+		<script>
+         $(function() {
+            $( "#idDeparturedate" ).datepicker();
+            $( "#idDeparturedate" ).datepicker("setDate", "10w+1");
+         });
+		 $(function() {
+            $( "#idReturndate" ).datepicker();
+            $( "#idReturndate" ).datepicker("setDate", "10w+1");
+         });
+      </script>
+	
      
    </body>
    
