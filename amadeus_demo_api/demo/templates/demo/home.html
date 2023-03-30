@@ -491,12 +491,14 @@
 	
 	<script>
 	 $(function() {
-		$( "#idDeparturedate" ).datepicker();
-		$( "#idDeparturedate" ).datepicker("setDate", "10w+1");
-	 });
+		$( "#idDeparturedate" ).datepicker({
+		   appendText:"(dd-mm-yy)",
+			dateFormat:"dd-mm-yy"
+		});
 	 $(function() {
 		$( "#idReturndate" ).datepicker();
-		$( "#idReturndate" ).datepicker("setDate", "10w+1");
+		appendText:"(dd-mm-yy)",
+		dateFormat:"dd-mm-yy"
 	 });
   </script>
 	
