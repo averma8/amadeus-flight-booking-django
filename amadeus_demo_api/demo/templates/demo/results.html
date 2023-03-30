@@ -126,18 +126,20 @@
 		</section>
 		
 		<div class="row pt-5">
-			<div class="col-md-6">
+			
+			<div class="col-md-12 text-center">
 		
 			{% if response %}
 				<h3 class="login-heading mb-4 text-left">Available flights</h3>
 				<h3 class="login-heading pl-3">{{ origin }} &#x2708 {{ destination }} <br>{{ departureDate }}
 			{% if returnDate %} <span class="text-info">&#10594&#10596</span> {{ returnDate }}{% endif %}</h3>
 			{% if tripPurpose %} <h4 class="login-heading mb-4 mt-4 pl-3">Flying for <span style="font-size: 26;color: darkred;">{{ tripPurpose }} </span> purposes</h4> {% endif %}
-
+			</div>
+			
 				{% for r, flight in response %}
 					{% if r.0firstFlightDepartureDate %}
-					
-						<div class="card mb-3 text-center" style="max-width: 40rem;">
+					<div class="col-md-6">
+						<div class="card mb-3 text-center w-100" >
 							<div class="nounderline card-header text-center" style="font-size: 26;color: darkred;">${{ r.price }}
 								<a href="{% url 'book_flight' flight %}"><input class="ml-2 btn btn-warning btn-lg text-uppercase font-weight-normal mb-2" type="Submit" name="bookFlight" value="Book Flight" /></a>
 							</div>
@@ -165,7 +167,7 @@
 								</div>
 							</div>
 						</div>
-						
+					</div>
 					{% endif %}
 				{% endfor %}
 			{% else %}
