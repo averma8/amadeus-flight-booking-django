@@ -118,8 +118,9 @@
          <!-- end header inner -->
       </header>
       <!-- end header -->
-	  <section class="home-banner" style="background-image:url({% static 'demo/images/banner.jpg'%})">
-            <!--<img src="{% static 'demo/images/banner.jpg'%}" alt="#"/>-->
+	  <section>
+         <div class="banner-main">
+            <img src="{% static 'demo/images/banner.jpg'%}" alt="#"/>
 			<div class="container">
                <div class="row">
 			   <div class="col-md-7 col-lg-7 col-12">
@@ -132,7 +133,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %}
-              <h3 class="login-heading mb-4 text-white">Search Flight</h3>
+              <h3 class="login-heading mb-4">Search Flight</h3>
               <form action="" method="POST" id="form_id" class="main-form"> {% csrf_token %}
                   <div class="form-label-group">
                       <input type="text" name="Origin" id="inputOrigin"
@@ -161,9 +162,9 @@
             </div>
 		</div>
 	</div>
-
-	</section>
-		
+	</div>
+			
+		</section>
       <!-- about -->
       <div id="about" class="about">
          <div class="container">
