@@ -2294,3 +2294,33 @@ ul.location_icon span {
 .header-logo{
 	width: 190px;
 }
+/*--------custom calendar--------*/
+.ui-widget-header {
+    border: 1px solid #FFC107 !important;
+    background: #FFEB3B !important;
+}
+span.ui-icon.ui-icon-circle-triangle-w:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    right: 0;
+    top: 4px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(317deg);
+}
+span.ui-icon.ui-icon-circle-triangle-e:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    right: 4px;
+    top: 4px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(130deg);
+}
+/*--------custom calendar--------*/
