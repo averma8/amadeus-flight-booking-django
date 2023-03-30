@@ -114,54 +114,54 @@
                   </div>
                </div>
             </div>
-         </div>
-         <!-- end header inner -->
+         </div><!-- end header inner -->
       </header>
       <!-- end header -->
-	  <section class="home-banner pt-4 pb-5" style="background-image:url(/static/demo/images/banner.jpg)">
+	  
+		<section class="home-banner pt-4 pb-5" style="background-image:url(/static/demo/images/banner.jpg)">
             <!--<img src="{% static 'demo/images/banner.jpg'%}" alt="#"/>-->
 			<div class="container">
-               <div class="row">
-			   <div class="col-md-7 col-lg-7 col-12">
-			   </div>
-            <div class="col-md-5 col-lg-5 col-12">
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li class="text-danger">{% if message.tags %}{% endif %}{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-              <h3 class="login-heading mb-4 text-white">Search Flight</h3>
-              <form action="" method="POST" id="form_id" class="main-form"> {% csrf_token %}
-                  <div class="form-label-group">
-                      <input type="text" name="Origin" id="inputOrigin"
-                             class="form-control" placeholder="From" required autofocus>
-                      <label for="inputOrigin">From</label>
-                  </div>
+                <div class="row">
+				   <div class="col-md-7 col-lg-7 col-12">
+				   </div>
+					<div class="col-md-5 col-lg-5 col-12">
+						{% if messages %}
+						<ul class="messages">
+							{% for message in messages %}
+							<li class="text-danger">{% if message.tags %}{% endif %}{{ message }}</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					  <h3 class="login-heading mb-4 text-white">Search Flight</h3>
+					  <form action="" method="POST" id="form_id" class="main-form"> {% csrf_token %}
+						  <div class="form-label-group">
+							  <input type="text" name="Origin" id="inputOrigin"
+									 class="form-control" placeholder="From" required autofocus>
+							  <label for="inputOrigin">From</label>
+						  </div>
 
-                  <div class="form-label-group">
-                      <input type="text" name="Destination" id="inputDestination"
-                             class="form-control" placeholder="To" required autofocus>
-                      <label for="inputDestination">To</label>
-                  </div>
-                  <div class="form-label-group">
-                      <input type="date" name="Departuredate" id="idDeparturedate"
-                             class="form-control" placeholder="Departure Date" required>
-                      <label for="idDeparturedate">Departure Date</label>
-                  </div>
+						  <div class="form-label-group">
+							  <input type="text" name="Destination" id="inputDestination"
+									 class="form-control" placeholder="To" required autofocus>
+							  <label for="inputDestination">To</label>
+						  </div>
+						  <div class="form-label-group">
+							  <input type="date" name="Departuredate" id="idDeparturedate"
+									 class="form-control" placeholder="Departure Date" required>
+							  <label for="idDeparturedate">Departure Date</label>
+						  </div>
 
-                  <div class="form-label-group">
-                      <input type="date" name="Returndate" id="idReturndate"
-                             class="form-control" placeholder="Return Date">
-                      <label for="idReturndate">Return Date</label>
-                  </div>
-                  <input class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="Submit" name="Submit" value="Search Flight" />
-              </form> 
-            </div>
-		</div>
-	</div>
-	</section>
+						  <div class="form-label-group">
+							  <input type="date" name="Returndate" id="idReturndate"
+									 class="form-control" placeholder="Return Date">
+							  <label for="idReturndate">Return Date</label>
+						  </div>
+						  <input class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="Submit" name="Submit" value="Search Flight" />
+					  </form> 
+					</div>
+				</div>
+			</div>
+		</section>
 	
 	
       <!-- about -->
