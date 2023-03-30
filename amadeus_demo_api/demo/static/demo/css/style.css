@@ -2302,25 +2302,25 @@ ul.location_icon span {
 span.ui-icon.ui-icon-circle-triangle-w:before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
-    z-index: 10;
-    right: 0;
-    top: 4px;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    transform: rotate(317deg);
+    width: 10px !important;
+    height: 10px !important;
+    z-index: 10 !important;
+    right: 0 !important;
+    top: 4px !important;
+    border-top: 2px solid #000 !important;
+    border-left: 2px solid #000 !important;
+    transform: rotate(317deg) !important;
 }
 span.ui-icon.ui-icon-circle-triangle-e:before {
     content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    z-index: 10;
-    right: 4px;
-    top: 4px;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    transform: rotate(130deg);
+    position: absolute !important;
+    width: 10px !important;
+    height: 10px !important;
+    z-index: 10 !important;
+    right: 4px !important;
+    top: 4px !important;
+    border-top: 2px solid #000 !important;
+    border-left: 2px solid #000 !important;
+    transform: rotate(130deg) !important;
 }
 /*--------custom calendar--------*/
