@@ -119,62 +119,24 @@
       </header>
       <!-- end header -->
 	  <section>
-         <div class="banner-main">
+         <div class="banner-main " style="height:70%">
             <img src="{% static 'demo/images/banner.jpg'%}" alt="#"/>
-			<div class="container">
-               <div class="text-bg">
-            <div class="col-md-9 col-lg-8 mx-auto">
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li class="text-danger">{% if message.tags %}{% endif %}{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-              <h3 class="login-heading mb-4">Search Flight</h3>
-              <form action="" method="POST" id="form_id" class="main-form"> {% csrf_token %}
-                  <div class="form-label-group">
-                      <input type="text" name="Origin" id="inputOrigin"
-                             class="form-control" placeholder="From" required autofocus>
-                      <label for="inputOrigin">From</label>
-                  </div>
-
-                  <div class="form-label-group">
-                      <input type="text" name="Destination" id="inputDestination"
-                             class="form-control" placeholder="To" required autofocus>
-                      <label for="inputDestination">To</label>
-                  </div>
-                  <div class="form-label-group">
-                      <input type="date" name="Departuredate" id="idDeparturedate"
-                             class="form-control" placeholder="Departure Date" required>
-                      <label for="idDeparturedate">Departure Date</label>
-                  </div>
-
-                  <div class="form-label-group">
-                      <input type="date" name="Returndate" id="idReturndate"
-                             class="form-control" placeholder="Return Date">
-                      <label for="idReturndate">Return Date</label>
-                  </div>
-                  <input class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="Submit" name="Submit" value="Search Flight" />
-              </form>
-            </div>
-		</div>
-	</div>
+			
 	</div>
 			
 		</section>
 		
 		<div class="row pt-5">
-    <div class="col-md-12">
+    <div class="col-md-6">
     <div class="col-md-12 offset-2">
         {% if response %}
             <h3 class="login-heading mb-4 text-left">Available flights</h3>
-			 <h3 class="login-heading pl-3">{{ origin }} &#x2708 {{ destination }} <br>{{ departureDate }}
+			<h3 class="login-heading pl-3">{{ origin }} &#x2708 {{ destination }} <br>{{ departureDate }}
         {% if returnDate %} <span class="text-info">&#10594&#10596</span> {{ returnDate }}{% endif %}</h3>
-       
+        {% if tripPurpose %} <h4 class="login-heading mb-4 mt-4 pl-3">Flying for <span style="font-size: 26;color: darkred;">{{ tripPurpose }} </span> purposes</h4> {% endif %}
             {% for r, flight in response %}
                 {% if r.0firstFlightDepartureDate %}
-                    <div class="card mb-3 text-center" style="max-width: 80rem;">
+                    <div class="card mb-3 text-center" style="max-width: 40rem;">
                         <div class="nounderline card-header text-center" style="font-size: 26;color: darkred;">${{ r.price }}
                             <a href="{% url 'book_flight' flight %}"><input class="ml-2 btn btn-warning btn-lg text-uppercase font-weight-normal mb-2" type="Submit" name="bookFlight" value="Book Flight" /></a>
                         </div>
