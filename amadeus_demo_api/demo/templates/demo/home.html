@@ -491,8 +491,16 @@
 	
 	<script>
 		$(function() {
-            $( "#idDeparturedate" ).datepicker();
-			$( "#idReturndate" ).datepicker();
+            $( "#idDeparturedate" ).datepicker({
+				appendText:"(dd-mm-yy)",
+               dateFormat:"dd-mm-yy",
+               altFormat: "DD, MM, yy"
+			});
+			$( "#idReturndate" ).datepicker({
+				appendText:"(dd-mm-yy)",
+               dateFormat:"dd-mm-yy",
+               altFormat: "DD, MM, yy"
+			});
         });
 	</script>
 	
