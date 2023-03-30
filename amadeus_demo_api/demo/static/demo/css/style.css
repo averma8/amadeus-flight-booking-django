@@ -2270,5 +2270,9 @@ ul.location_icon span {
 .contact-page .form-control {
      margin-bottom: 20px;
 }
-
 /** slider arrow **/
+.home-banner {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
