@@ -2367,7 +2367,9 @@ ul.content-heading li a {
     font-weight: 300;
 }
 .dropdown-menu.show a {
-    color: #0787a2;
+	color: #0787a2;
+	padding: 5px 10px;
+	border-top: 1px solid #eee;
 }
 /*--/accordian---*/
 button.close {
