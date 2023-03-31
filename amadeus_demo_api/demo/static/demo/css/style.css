@@ -2271,6 +2271,7 @@ ul.location_icon span {
      margin-bottom: 20px;
 }
 /** slider arrow **/
+/** new css 30-3-23 **/
 .home-banner {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -2293,6 +2294,9 @@ ul.location_icon span {
 }
 .header-logo{
 	width: 190px;
+}
+ul.list li {
+    list-style: disc;
 }
 /*--------custom calendar--------*/
 .ui-widget-header {
