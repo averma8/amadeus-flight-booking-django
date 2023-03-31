@@ -172,7 +172,7 @@
                               <textarea type="text" class="form-control" placeholder="" id="details" name="details"></textarea>
                            </div>
                            <div class="mb-2">
-                              <button class="btn btn-warning btn-block rounded-0">Book Now</button>
+                              <button type="button" class="btn btn-warning btn-block rounded-0" data-toggle="modal" data-target="#staticBackdrop">Book Now</button>
                            </div>
                         </form>
                      </div>
@@ -181,6 +181,30 @@
             </div>
          </div>
       </section>
+	  
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content ">
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			 <span aria-hidden="true">&times;</span>
+		  </button>
+		  <div class="modal-body">
+			<div class="row">
+			   <div class="col-md-12 col-12 text-center">
+				  <div class="message-box pt-5 pb-5 border border-warning">
+					 <h1 class="font-weight-bold text-info">To book this flight</h1>
+					 <h2 class="font-weight-bold">Call Us</h2>
+					 <h3><a href="tel:+1-xxx-xxx-xxxx" class="btn btn-warning btn-lg round text-white font-weight-bold">+1-xxx-xxx-xxxx</a></h3>
+				  </div>
+			   </div>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	</div>
+	<!-- /Modal -->
 
       <!-- about -->
       <div id="about" class="abouts pt-5">

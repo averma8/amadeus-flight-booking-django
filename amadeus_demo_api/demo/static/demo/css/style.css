@@ -2370,3 +2370,16 @@ ul.content-heading li a {
     color: #0787a2;
 }
 /*--/accordian---*/
+button.close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background-color: #ccc;
+    padding: 3px 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+.round{
+     border-radius: 100px !important;
+}
