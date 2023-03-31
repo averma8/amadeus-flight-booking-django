@@ -1,0 +1,635 @@
+{% load static %}
+
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CheapFlightsFirst- Book Cheap Flight Tickets</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+	  
+		<!-- datepicker css -->
+	   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <!-- bootstrap css -->
+	   <link rel="stylesheet" href="{% static 'demo/css/bootstrap.min.css' %}">
+      <!-- style css -->
+	  	<link rel="stylesheet" href="{% static 'demo/css/style.css' %}">
+      <!-- Responsive-->
+	  	<link rel="stylesheet" href="{% static 'demo/css/responsive.css' %}">
+      <!-- fevicon -->
+	   <link rel="icon" href="{% static 'demo/images/fevicon.png' type='image/gif'%}" />
+      <!-- Scrollbar Custom CSS -->
+	  	<link rel="stylesheet" href="{% static 'demo/css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <!-- owl stylesheets --> 
+	  	<link rel="stylesheet" href="{% static 'demo/css/owl.carousel.min.css' %}">
+	  	<link rel="stylesheet" href="{% static 'demo/css/owl.theme.default.min.css' %}">
+
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	  
+	  <link rel="stylesheet" type="text/css" href="{% static 'demo/style.css' %}">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#inputOrigin").autocomplete({
+                source: "{% url 'origin_airport_search'%}",
+                minLength: 1,
+                delay: 200,
+            });
+        });
+    </script>
+    <script>
+    $(document).ready(function () {
+        $("#inputDestination").autocomplete({
+            source: "{% url 'destination_airport_search'%}",
+            minLength: 1,
+            delay: 200,
+        });
+    });
+</script>
+	  
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+		 <div class="loader"><img src="{% static 'demo/images/loading.gif'%}" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="header_white_section">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="header_information">
+                           <ul>
+                              <li><img src="{% static 'demo/images/1.png'%}" alt="#"/>30 N. Gould St,Sheridan, WY 82801</li>
+                              <li><img src="{% static 'demo/images/2.png'%}" alt="#"/>(888) 905-8260</li>
+                              <li><img src="{% static 'demo/images/2.png'%}" alt="#"/> info@cheapflightsfirst.com</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo"> <a href="index.html"><img src="{% static 'demo/images/logo.svg'%}" class="header-logo" alt="#"></a> </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="menu-area">
+                        <div class="limit-box">
+                           <nav class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li class="active"> <a href="#">Home</a> </li>
+                                 <li> <a href="#about">About</a> </li>
+                                 <li><a href="#travel">Travel</a></li>
+                                 <li><a href="#blog">Blog</a></li>
+                                 <li><a href="#contact">Contact Us</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div><!-- end header inner -->
+      </header>
+      <!-- end header -->
+
+
+	  
+		<section class="page-banner pt-5 pb-5" style="background-image:url(/static/demo/images/banner2.jpg)">
+			<div class="banner-overlay"></div>
+			<div class="container">
+            <div class="row">
+               <div class="col-md-12 col-12 text-center">
+                  <h1 class="text-white">LAX to JFK</h1>
+               </div>
+            </div><!--/row-->      
+         </div>
+		</section>
+
+      <section class="content-box pt-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-12">
+                  <h2>About Los Angeles International Airport – LAX</h2>
+                  <p>Los Angeles International Airport (IATA: LAX, ICAO: KLAX, FAA LID: LAX) is the major international airport servicing Los Angeles and the surrounding metropolitan region. It is also known as LAX.</p>
+                  <p>LAX lies in the Los Angeles neighborhood of Westchester, 18 miles (30 kilometers) southwest of Downtown Los Angeles, with Westchester's commercial and residential districts to the north, El Segundo's to the south, and Inglewood's to the east. Los Angeles International Airport (LAX) is the nearest airport to the Westside and the South Bay.</p>
+                  <p>Los Angeles World Airports (LAWA), a division of the Los Angeles city government that also maintains Van Nuys Airport for general aviation, manages the airport. The airport has four parallel runways and covers 3,500 acres (1,400 hectares) of land.</p>
+                  <p>Although LAX is the busiest airport in the Greater Los Angeles Area, the region is served by a number of additional airports, including Hollywood Burbank Airport, John Wayne Airport (Orange County), Long Beach Airport, and Ontario International Airport.</p>
+                  <p>In 2021, LAX served more than 28,779,527 passengers.</p>
+
+                  <h3>Airlines that serve LAX:</h3>
+                  <p>The airport is served by many airlines from across the world, but here are the names of top airlines that serve the biggest airport of Los Angeles – LAX:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>Aeroméxico Airlines</li>
+                     <li>Air Canada</li>
+                     <li>Air China</li>
+                     <li>Air France</li>
+                     <li>Air New Zealand</li>
+                     <li>Alaska Airlines</li>
+                     <li>Allegiant Airlines</li>
+                     <li>All Nippon Airlines</li>
+                     <li>American Airlines</li>
+                     <li>Asiana Airlines</li>
+                     <li>Austrian Airlines</li>
+                     <li>Boutique Air</li>
+                     <li>British Airways</li>
+                     <li>Cathay Pacific Airlines</li>
+                     <li>China Airlines</li>
+                     <li>Copa Airlines</li>
+                     <li>Delta Airlines</li>
+                     <li>Emirates Airlines</li>
+                     <li>EVA Airlines</li>
+                     <li>Fiji Airlines</li>
+                     <li>Finnair Airlines</li>
+                     <li>Hawaiian Airlines</li>
+                     <li>Iberia Airlines</li>
+                     <li>Japan Airlines</li>
+                     <li>JetBlue Airways</li>
+                     <li>KLM Airlines</li>
+                     <li>Korean Airlines</li>
+                     <li>Lufthansa Airlines</li>
+                     <li>Qatar Airlines</li>
+                     <li>Singapore Airlines</li>
+                     <li>Southwest Airlines</li>
+                     <li>Spirit Airlines</li>
+                     <li>Sun Country Airlines</li>
+                     <li>Swiss International Airlines</li>
+                     <li>Turkish Airlines</li>
+                     <li>United Airlines</li>
+                     <li>Virgin Atlantic Airlines</li>
+                     <li>Volaris Airlines</li>
+                     <li>WestJet Airlines</li>
+                  </ul>
+                  
+                  <h3>Top Domestic Destinations Routes of LAX:</h3>
+                  <p>Flights to many domestic destinations within United States of America flies from Los Angeles Airport LAX, here are the names of top 10 destinations:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>Dallas / Fort Worth</li>
+                     <li>Chicago – O’ Hare</li>
+                     <li>Las Vegas</li>
+                     <li>Denver</li>
+                     <li>New York – JFK</li>
+                     <li>Honolulu</li>
+                     <li>Atlanta</li>
+                     <li>Seattle / Tacoma</li>
+                     <li>Phoenix - Sky Harbor</li>
+                     <li>San Francisco</li>
+                  </ul>
+
+                  <h3>Top International Destinations Routes of LAX:</h3>
+                  <p>Flights to many international destinations around the world flies from Los Angeles Airport LAX, here are the names of top 10 destinations:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>London – Heathrow</li>
+                     <li>Paris – Charles de Gaulle</li>
+                     <li>Mexico City</li>
+                     <li>Seoul – Incheon</li>
+                     <li>Guadalajara</li>
+                     <li>Vancouver</li>
+                     <li>Sydney</li>
+                     <li>Hong Kong</li>
+                     <li>Tokyo – Narita</li>
+                     <li>Shanghai – Pudong</li>
+                  </ul>
+
+                  <h2>About New York Airport / John F. Kennedy International Airport – JFK</h2>
+                  <p>John F. Kennedy International Airport (IATA: JFK, ICAO: KJFK, FAA LID: JFK) is an international airport in New York City. With nearly 62.5 million passengers handled in 2019, the airport is the major and busiest international air passenger gateway into North America, the world's 20th busiest airport, the United States' sixth busiest airport, and the busiest airport in the New York airport system. More than ninety airlines operate from the airport, with nonstop or direct flights to destinations in all six continents of the world.</p>
+                  <p>JFK is 16 miles (26 kilometers) southeast of Midtown Manhattan, in the Jamaica area of Queens. There are six passenger terminals and four runways at the airport. JFK serves as a hub for American Airlines and Delta Air Lines, as well as JetBlue's major operating base. Pan Am, TWA, Eastern, National, and Tower Air all used JFK as a hub.</p>
+                  <p>In 2021, JFK served more than 16,630,642 Passengers.</p>
+
+                  <h3>Airlines that serve JFK</h3>
+                  <p>The airport is served by many airlines from across the world, but here are the names of top airlines that serve the biggest airport of Los Angeles – LAX:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>Aeroméxico Airlines</li>
+                     <li>Air Canada</li>
+                     <li>Air China</li>
+                     <li>Air Europa</li>
+                     <li>Air France</li>
+                     <li>Air India</li>
+                     <li>Alaska Airlines</li>
+                     <li>All Nippon Airlines</li>
+                     <li>American Airlines</li>
+                     <li>Asiana Airlines</li>
+                     <li>Avianca Airlines</li>
+                     <li>Austrian Airlines</li>
+                     <li>Brussel Airlines</li>
+                     <li>British Airways</li>
+                     <li>Cathay Pacific Airlines</li>
+                     <li>China Airlines</li>
+                     <li>Cape Airlines</li>
+                     <li>Condor Airlines</li>
+                     <li>Delta Airlines</li>
+                     <li>Egypt Air</li>
+                     <li>Emirates Airlines</li>
+                     <li>Etihad Airlines</li>
+                     <li>Ethiopian Airlines</li>
+                     <li>EVA Airlines</li>
+                     <li>Finnair Airlines</li>
+                     <li>Hawaiian Airlines</li>
+                     <li>Iberia Airlines</li>
+                     <li>Japan Airlines</li>
+                     <li>JetBlue Airways</li>
+                     <li>Kenya Airlines</li>
+                     <li>KLM Airlines</li>
+                     <li>Korean Airlines</li>
+                     <li>Kuwait Airlines</li>
+                     <li>Lufthansa Airlines</li>
+                     <li>Qatar Airlines</li>
+                     <li>Saudia Airlines</li>
+                     <li>Singapore Airlines</li>
+                     <li>Swiss International Airlines</li>
+                     <li>TAP Portugal Airlines</li>
+                     <li>Turkish Airlines</li>
+                     <li>United Airlines</li>
+                     <li>Virgin Atlantic Airlines</li>
+                     <li>Volaris Airlines</li>
+                     <li>WestJet Airlines</li>
+                  </ul>
+
+                  <h3>Top Domestic Destinations routes of JFK</h3>
+                  <p>Flights to many domestic destinations within United States of America flies from New York Airport / John F. Kennedy International Airport – JFK, here are the names of top 10 destinations:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>Los Angeles, California</li>
+                     <li>Miami, Florida</li>
+                     <li>Fort Lauderdale, Florida</li>
+                     <li>Orlando, Florida</li>
+                     <li>San Juan, Puerto Rico</li>
+                     <li>San Francisco, California</li>
+                     <li>Atlanta, Georgia</li>
+                     <li>Seattle/Tacoma, Washington</li>
+                     <li>Salt Lake City, Utah</li>
+                     <li>Phoenix-Sky Harbor, Arizona</li>
+                  </ul>
+
+                  <h3>Top International Destinations routes of JFK</h3>
+                  <p>Flights to many international destinations around the globe flies from New York Airport / John F. Kennedy International Airport – JFK, here are the names of top 10 destinations:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>London-Heathrow</li>
+                     <li>Paris–Charles de Gaulle</li>
+                     <li>Mexico City</li>
+                     <li>Amsterdam</li>
+                     <li>Madrid</li>
+                     <li>Santiago de los Caballeros </li>
+                     <li>Istanbul</li>
+                     <li>Santo Domingo</li>
+                     <li>Milan–Malpensa</li>
+                     <li>Frankfurt</li>
+                  </ul>
+
+                  <h3>Flights from LAX to JFK</h3>
+                  <p>There are domestic and famous airlines that serve flights from Los Angeles LAX to New York JFK. Flights from Los Angeles to New York are approximately 114 per day, and the number goes up to 1008 per week.</p>
+                  <p>The average flight time between Los Angeles (LAX) and New York (JFK) is 9 hours 58 minutes. Based on past flights for this route, this is the average non-stop flight time. Travelers can anticipate to fly 3,176 miles (5,112 kilometers) during this time.</p>
+                  <p>Several airlines offer direct flights from Los Angeles (LAX) to New York on a monthly basis (JFK). Among the top airlines that consistently provide flights from LAX to JFK include:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>American Airlines - (AA) with 360 direct flights between Los Angeles and New York monthly</li>
+                     <li>United Airlines - (UA) with 120 direct flights between LAX and JFK monthly</li>
+                     <li>Qatar Airways - (QR) with 30 direct flights between Los Angeles and New York monthly</li>
+                     <li>Delta Air Lines - (DL) with 390 direct flights between LAX and JFK monthly</li>
+                     <li>Emirates - (EK) with 60 direct flights between Los Angeles and New York monthly</li>
+                     <li>Alaska Airlines - (AS) with 120 direct flights between LAX and JFK monthly</li>
+                  </ul>
+
+                  <h3>Estimated Economy Class Airfares for flights from Los Angeles to New York</h3>
+                  <p>Below are the estimated airfares of different airlines which offer flights from Los Angeles to New York. The airfares are of one-way ticket and economy class:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>Economy Class of JetBlue Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 79</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 94</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 114</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 294</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of Alaska Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 128</p>
+                     </li>
+                  </ul>
+
+                  <h4>** Note - Prices may differ while actual booking.</strong></p>
+
+                  <h3>Estimated Premium Economy Class Airfares for flights from Los Angeles to New York</h3>
+                  <p>Below are the estimated airfares of different airlines which offer flights from Los Angeles to New York. The airfares are of one-way ticket and premium economy class:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>Premium Economy Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 213</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of Alaska Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 509</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 557</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 692</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of JetBlue Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 898</p>
+                     </li>
+                  </ul>
+                  <h4>** Note - Prices may differ while actual booking.</h4>
+
+                  <h3>Estimated Business Class Airfares for flights from Los Angeles to New York</h3>
+                  <p>Below are the estimated airfares of different airlines which offer flights from Los Angeles to New York. The airfares are of one-way ticket and Business class:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>Business Class of Alaska Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 509</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 528</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of America Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 557</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of JetBlue Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 898</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 915</p>
+                     </li>
+                  </ul>
+                  <h4>** Note - Prices may differ while actual booking.</h4>
+
+                  <h3>Estimated First Class Airfares for flights from Los Angeles to New York</h3>
+                  <p>Below are the estimated airfares of different airlines which offer flights from Los Angeles to New York. The airfares are of one-way ticket and First class:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>First Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 528</p>
+                     </li>
+                     <li>
+                        <p><strong>First Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 596</p>
+                     </li>
+                     <li>
+                        <p><strong>First Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 915</p>
+                     </li>
+                  </ul>
+                  <h4>** Note - Prices may differ while actual booking.</h4>
+
+                  <h3>Estimated Round Trip Airfares for flights from Los Angeles to New York</h3>
+                  <p>Below are the estimated airfares of different airlines which offer flights from Los Angeles to New York. The airfares are of round-trip flights:</p>
+
+                  <h4>Economy Class:</h4>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>Economy Class of JetBlue Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 157</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 174</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 174</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 194</p>
+                     </li>
+                     <li>
+                        <p><strong>Economy Class of Alaska Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 208</p>
+                     </li>
+                  </ul>
+
+                  <h4>Premium Economy Class:</h4>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>Premium Economy Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 496</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of Alaska Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 781</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 829</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 965</p>
+                     </li>
+                     <li>
+                        <p><strong>Premium Economy Class of JetBlue Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1, 174</p>
+                     </li>
+                  </ul>
+
+                  <h4>Business Class:</h4>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>Business Class of Alaska Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,028</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,052</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,081</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of JetBlue Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,426</p>
+                     </li>
+                     <li>
+                        <p><strong>Business Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,443</p>
+                     </li>
+                  </ul>
+
+                  <h4>First Class:</h4>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>
+                        <p><strong>First Class of Delta Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,052</p>
+                     </li>
+                     <li>
+                        <p><strong>First Class of American Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,072</p>
+                     </li>
+                     <li>
+                        <p><strong>First Class of United Airlines:</strong></p>
+                        <p>The airfare of flights from LAX to JFK starts at $ 1,443</p>
+                     </li>
+                  </ul>
+                  <h4>** Note - Prices may differ while actual booking.</h4>
+               </div>
+            </div><!--/row-->
+         </div>
+      </section><!--/content-box-->
+
+
+      <!-- footer -->
+      <footer>
+         <div id="contact" class="footer">
+            <div class="container">
+               <div class="row pdn-top-30">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                     <ul class="location_icon">
+                        <li> <a href="#"><img src="{% static 'demo/icon/facebook.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/Twitter.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/linkedin.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/instagram.png'%}"></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>CONTACT US</h3>
+                        <span>30 N. Gould St.<br>
+                        Sheridan, WY, 82801<br>
+                        (888) 905-8260</span>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>ADDITIONAL LINKS</h3>
+                        <ul class="link">
+                           <li> <a href="#">About us</a></li>
+                           <li> <a href="#">Terms and conditions</a></li>
+                           <li> <a href="#"> Privacy policy</a></li>
+                           <li> <a href="#">News</a></li>
+                           <li> <a href="#"> Contact us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3> Contact</h3>
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <input class="Newsletter" placeholder="Name" type="text">
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <input class="Newsletter" placeholder="Email" type="text">
+                           </div>
+                           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                              <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
+                           </div>
+                        </div>
+                        <button class="Subscribe">Submit</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <p>Copyright 2022 All Right Reserved By <a href="#">CheapFlightsFirst LLC</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+		<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<!-- date-picker -->
+	  
+      <script src="{% static 'demo/js/jquery.min.js'%}"></script>
+      <script src="{% static 'demo/js/popper.min.js'%}"></script>
+      <script src="{% static 'demo/js/bootstrap.bundle.min.js'%}"></script>
+      <script src="{% static 'demo/js/jquery-3.0.0.min.js'%}"></script>
+      <script src="{% static 'demo/js/plugin.js'%}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'demo/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+      <script src="{% static 'demo/js/custom.js'%}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'demo/js/owl.carousel.js'%}"></script>
+      <script>
+         $(document).ready(function() {
+           var owl = $('.owl-carousel');
+           owl.owlCarousel({
+             margin: 10,
+             nav: true,
+             loop: true,
+             responsive: {
+               0: {
+                 items: 1
+               },
+               600: {
+                 items: 2
+               },
+               1000: {
+                 items: 3
+               }
+             }
+           })
+         })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $("#form_id").on("submit", function (e) {
+        e.preventDefault(); //stop submit event
+        var self = $(this);
+        var originGiven = $("#inputOrigin").val();
+        $("#inputOrigin").val(originGiven.slice(0,3));
+        var destinationGiven = $("#inputDestination").val();
+        $("#inputDestination").val(destinationGiven.slice(0,3));
+        $("#form_id").off("submit");
+        self.submit();
+    });
+    </script>
+	
+	<script>
+	 $(function() {
+		$( "#idDeparturedate" ).datepicker({
+		   appendText:"(dd-mm-yy)",
+			dateFormat:"dd-mm-yy"
+		});
+	 $(function() {
+		$( "#idReturndate" ).datepicker();
+		appendText:"(dd-mm-yy)",
+		dateFormat:"dd-mm-yy"
+	 });
+  </script>
+	
+     
+   </body>
+   
+</html>
