@@ -2331,6 +2331,9 @@ span.ui-icon.ui-icon-circle-triangle-e:before {
 ul.list li {
     list-style: disc;
 }
+.text-box h1 {
+     font-size: 50px;
+}
 /*--accordian---*/
 .accordions {
     background-color: #f1f5f4;
