@@ -1,0 +1,430 @@
+{% load static %}
+
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CheapFlightsFirst- Book Cheap Flight Tickets</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+	  
+		<!-- datepicker css -->
+	   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <!-- bootstrap css -->
+	   <link rel="stylesheet" href="{% static 'demo/css/bootstrap.min.css' %}">
+      <!-- style css -->
+	  	<link rel="stylesheet" href="{% static 'demo/css/style.css' %}">
+      <!-- Responsive-->
+	  	<link rel="stylesheet" href="{% static 'demo/css/responsive.css' %}">
+      <!-- fevicon -->
+	   <link rel="icon" href="{% static 'demo/images/fevicon.png' type='image/gif'%}" />
+      <!-- Scrollbar Custom CSS -->
+	  	<link rel="stylesheet" href="{% static 'demo/css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <!-- owl stylesheets --> 
+	  	<link rel="stylesheet" href="{% static 'demo/css/owl.carousel.min.css' %}">
+	  	<link rel="stylesheet" href="{% static 'demo/css/owl.theme.default.min.css' %}">
+
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	  
+	  <link rel="stylesheet" type="text/css" href="{% static 'demo/style.css' %}">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#inputOrigin").autocomplete({
+                source: "{% url 'origin_airport_search'%}",
+                minLength: 1,
+                delay: 200,
+            });
+        });
+    </script>
+    <script>
+    $(document).ready(function () {
+        $("#inputDestination").autocomplete({
+            source: "{% url 'destination_airport_search'%}",
+            minLength: 1,
+            delay: 200,
+        });
+    });
+</script>
+	  
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+		 <div class="loader"><img src="{% static 'demo/images/loading.gif'%}" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="header_white_section">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="header_information">
+                           <ul>
+                              <li><img src="{% static 'demo/images/1.png'%}" alt="#"/>30 N. Gould St,Sheridan, WY 82801</li>
+                              <li><img src="{% static 'demo/images/2.png'%}" alt="#"/>(888) 905-8260</li>
+                              <li><img src="{% static 'demo/images/2.png'%}" alt="#"/> info@cheapflightsfirst.com</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo"> <a href="index.html"><img src="{% static 'demo/images/logo.svg'%}" class="header-logo" alt="#"></a> </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="menu-area">
+                        <div class="limit-box">
+                           <nav class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li class="active"> <a href="#">Home</a> </li>
+                                 <li> <a href="#about">About</a> </li>
+                                 <li><a href="#travel">Travel</a></li>
+                                 <li><a href="#blog">Blog</a></li>
+                                 <li><a href="#contact">Contact Us</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div><!-- end header inner -->
+      </header>
+      <!-- end header -->
+
+
+	  
+		<section class="page-banner pt-5 pb-5" style="background-image:url(/static/demo/images/banner2.jpg)">
+			<div class="banner-overlay"></div>
+			<div class="container">
+            <div class="row">
+               <div class="col-md-12 col-12 text-center">
+                  <h1 class="text-white">How can you book cheap business class flights?</h1>
+               </div>
+            </div><!--/row-->      
+         </div>
+		</section>
+
+
+      <section class="content-box pt-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-12">
+                  <p>We all dream of traveling in business class. Wouldn't it be great if we told you that you could achieve this dream by buying cheap business class tickets?</p>
+                  <p>Only a few of us have ever experienced the pleasure of travelling in Business class on a flight. The business class section of an airplane is the most expensive section. Sometimes the prices are too much for the average person.</p>
+                  <p>A business class seat on an airplane is considered the most prestigious and luxurious seat available. A business class compartment is located at the front of the aircraft. In case of an emergency, it has the easiest exit and provides comfortable boarding. The comfort of business class varies among different airlines, and there are many other benefits as well. It is also very expensive compared to all other classes of travel.</p>
+                  <p>Flying in business class can be an unforgettable experience. However, the cost of a business class on any flight can be prohibitive for someone from a middle-class family, or even someone who is not able to afford it.</p>
+                  <p>In today’s article we are going to discuss about business class in detail and how to book a cheap business class flight ticket.</p>
+
+                  <h2>Is the price hike of Business Class even worth it?</h2>
+                  <p>It's totally worth it to travel in a business class and pay outrageous extras for it. This class offers a higher level of comfort and quality than economy class on any flight. Many services are available to business class passengers in flight that make their experience very comfortable and luxurious.</p>
+                  <p>If you are traveling in business class, there is no charge for meals, and you're entitled to unlimited alcoholic or non-alcoholic beverages. As compared to an economy class compartment, the business class compartment provides more legroom, a semi-sleep bed, a TV monitor to keep you entertained, and a lot more to make your flight more comfortable.</p>
+                  <p>For any airline, business class passengers are treated as priority passengers. This means that they are served first at check-in and check-out. They are shuttled directly to the plane. They receive better aid and help when they are in need since they are considered a priority. These travelers are also given access to the airport lounge, where they may obtain food and drinks, as well as a fantastic deal that allows them to check extra baggage for free. Their baggage allowance per person is 30-40 kilograms.</p>
+                  <p>Passengers are provided with ample personal space and a high level of comfort. One can get a good night's sleep to avoid jet lag thanks to their luxurious mattresses and lounge seats. Pillows, sheets, quilts, and other items are provided by airlines for a more comfortable travel and sleep.</p>
+                  <p>According to previous studies, on weekends, public holidays, Christmas, New Year, and many other dates throughout the year, you can book cheap business class flights. A business class ticket might cost anywhere from $ 500 to $ 3000, depending on your location and the airline you choose.</p>
+
+                  <h3>How to book cheap business class flights?</h3>
+                  <p>There are a few tips and tactics that can help you get cheap business class flight deals, making business class not only affordable but also providing many facilities and benefits. You can use these tips to get cheap business class flights without any trouble and easy process:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>Understand the difference – Before we go any further, it's important to note that business class tickets are significantly more expensive than regular economy tickets. We must be aware of the distinctions between business and economy class. Then compare what we're spending and whether we're getting that comfort.</li>
+                     <li>Try cheap airlines – If an airline's usual costs are lower than those of other airlines, it's likely that business class flight tickets will be cheaper as well.</li>
+                     <li>Upgrade at the last minute – People can upgrade their class to Business class at the last minute for a minimal fee and enjoy the comfort and services of business class. And, if you're really lucky, you might get a free upgrade; but, this is quite rare. Some airlines also allow you to bid on an upgrade; in this case, you bid an amount you're willing to pay for a cheap business class flight, and the top bidder receives an upgrade to business class at the price you bid.</li>
+                     <li>Check pricing – Always compare airfares and conduct thorough research on different airlines. We can find the greatest deal for us to fly in Business class by comparing rates and features.</li>
+                     <li>Know the ideal time to fly – Because business class customers are usually business people, it's preferable to hunt for cheap flights on non-business days. Weekends, public holidays, Christmas, New Year, and other days when corporate business is not a priority are the best days to get reduced costs for Business class tickets.</li>
+                     <li>Stay up to date – Always be aware of the latest business class airfares. You'll be notified as prices drop and when a better deal on a cheap business class flight becomes available. There are sales in all classes from time to time, so affordable business class flights are available.</li>
+                     <li>Join airline loyalty programs – There are a variety of airline loyalty programs to choose from. You may use the points you earn in these programs to buy a cheap business class travel ticket by redeeming them.</li>
+                     <li>Book round trip flights – If you have a well-planned trip and know your return dates, round trip flights are the way to go. When purchasing a one-way ticket, we may be required to pay the same amount for our return ticket, which may be greater or cheaper based on a variety of conditions. When ordering round trip tickets, however, we essentially obtain a combo ticket that allows us to depart and come back, and the combos always cost less than reserving two separate tickets.</li>
+                     <li>Book through tour and travel firms – Several tour and travel businesses offer the best and cheapest discounts on all types of travel, so keep an eye out for and consider tour packages given by these companies for fantastic and affordable Business class bargains.</li>
+                     <li>Use incognito mode when looking for cheap flights — When looking for cheap business class flights, use incognito mode. Incognito mode stops websites from being notified that you are looking, preventing them from raising rates in response to increased traffic.</li>
+                  </ul>
+
+                  <h3>Airlines through which you can book cheap Business Class Flights</h3>
+                  <p>Although many airlines operate to the United States, only a few of them provide good and affordable business class tickets.</p>
+                  <p>Some of the names are provided below; you can choose from them according to your preferences:</p>
+                  
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>American Airlines</li>
+                     <li>United Airlines</li>
+                     <li>Delta Airlines</li>
+                     <li>Hawaiian Airlines</li>
+                     <li>Jetstar Airlines</li>
+                     <li>British Airways</li>
+                     <li>Icelandair Airlines</li>
+                     <li>JetBlue Airlines</li>
+                     <li>Aer Lingus Airlines</li>
+                     <li>Norwegian Air</li>
+                     <li>Turkish Airlines</li>
+                     <li>Air Asia</li>
+                     <li>Virgin Atlantic</li>
+                  </ul>
+
+                  <h3>Some great holiday destinations in United States of America</h3>
+                  <p>Here is a list of some of the top places to visit in the United States of America this holiday season and use the above great tactics to get cheap business class flights:</p>
+                  <ul class="list pl-4 mb-3 mt-3">
+                     <li>Chicago</li>
+                     <li>New York</li>
+                     <li>Miami</li>
+                     <li>Hawaii</li>
+                     <li>Las Vegas</li>
+                     <li>Los Angeles</li>
+                     <li>Denver</li>
+                     <li>Dallas</li>
+                     <li>Washington D. C.</li>
+                     <li>Seattle</li>
+                     <li>Boston</li>
+                     <li>Atlanta</li>
+                     <li>Myrtle Beach</li>
+                     <li>Salt Lake City</li>
+                     <li>Phoenix</li>
+                     <li>Orlando</li>
+                  </ul>
+
+                  <h3>Estimated airfares of Cheap Business Class Flights within United States</h3>
+                  <p>Every place has a varied range of beginning prices or level of excellence. Here are a few estimates to give you an idea of how much flying through business class in different states will cost.</p>
+                  <p>(NOTE- As the hub of domestic flights in the United States, we have chosen New York Airport as the travel start point. Also, the airfares are for business class and one way ticket.)</p>
+               </div>
+
+               <div class="col-md-6 col-12 mb-4">
+                  <div class="prz-box bg-light around p-3 h-100">
+                     <p><strong>Cheapest business class airfares of American Airlines for different locations:</strong></p>
+                     <p>For flights to New York to Chicago, the airfare starts from $ 194</p>
+                     <p>For flights to New York to Miami, the airfare starts from $ 253</p>
+                     <p>For flights to New York to Hawaii, the airfare starts from $ 671</p>
+                     <p>For flights to New York to Las Vegas, the airfare starts from $ 447</p>
+                     <p>For flights to New York to Los Angeles, the airfare starts from $ 507</p>
+                     <p>For flights to New York to Denver, the airfare starts from $ 436</p>
+                     <p>For flights to New York to Dallas, the airfare starts from $ 296</p>
+                     <p>For flights to New York to Washington D. C., the airfare starts from $ 124</p>
+                     <p>For flights to New York to Myrtle Beach, the airfare starts from $ 267</p>
+                     <p>For flights to New York to Salt Lake City, the airfare starts from $ 488</p>
+                     <p>For flights to New York to Seattle, the airfare starts from $ 499</p>
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-12 mb-4">
+                  <div class="prz-box bg-light around p-3 h-100">
+                     <p><strong>Cheapest business class airfares of United Airlines for different locations:</strong></p>
+                     <p>For flights to New York to Chicago, the airfare starts from $ 209</p>
+                     <p>For flights to New York to Miami, the airfare starts from $ 255</p>
+                     <p>For flights to New York to Hawaii, the airfare starts from $ 930</p>
+                     <p>For flights to New York to Las Vegas, the airfare starts from $ 449</p>
+                     <p>For flights to New York to Los Angeles, the airfare starts from $ 458</p>
+                     <p>For flights to New York to Denver, the airfare starts from $ 404</p>
+                     <p>For flights to New York to Dallas, the airfare starts from $ 329</p>
+                     <p>For flights to New York to Washington D. C., the airfare starts from $ 169</p>
+                     <p>For flights to New York to Myrtle Beach, the airfare starts from $ 229</p>
+                     <p>For flights to New York to Salt Lake City, the airfare starts from $ 413</p>
+                     <p>For flights to New York to Seattle, the airfare starts from $ 449</p>
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-12 mb-4">
+                  <div class="prz-box bg-light around p-3 h-100">
+                     <p><strong>Cheapest business class airfares of Delta Airlines for different locations:</strong></p>
+                     <p>For flights to New York to Chicago, the airfare starts from $ 169</p>
+                     <p>For flights to New York to Miami, the airfare starts from $ 289</p>
+                     <p>For flights to New York to Hawaii, the airfare starts from $ 708</p>
+                     <p>For flights to New York to Las Vegas, the airfare starts from $ 453</p>
+                     <p>For flights to New York to Los Angeles, the airfare starts from $ 528</p>
+                     <p>For flights to New York to Denver, the airfare starts from $ 419</p>
+                     <p>For flights to New York to Dallas, the airfare starts from $ 259</p>
+                     <p>For flights to New York to Washington D. C., the airfare starts from $ 129</p>
+                     <p>For flights to New York to Myrtle Beach, the airfare starts from $ 204</p>
+                     <p>For flights to New York to Salt Lake City, the airfare starts from $ 468</p>
+                     <p>For flights to New York to Seattle, the airfare starts from $ 461</p>
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-12 mb-4">
+                  <div class="prz-box bg-light around p-3 h-100">
+                     <p><strong>Cheapest business class airfares of JetBlue Airlines for different locations:</strong></p>
+                     <p>For flights to New York to Chicago, the airfare starts from $ 197</p>
+                     <p>For flights to New York to Miami, the airfare starts from $ 289</p>
+                     <p>For flights to New York to Hawaii, the airfare starts from $ 874</p>
+                     <p>For flights to New York to Las Vegas, the airfare starts from $ 1,446</p>
+                     <p>For flights to New York to Los Angeles, the airfare starts from $ 898</p>
+                     <p>For flights to New York to Denver, the airfare starts from $ 471</p>
+                     <p>For flights to New York to Dallas, the airfare starts from $ 329</p>
+                     <p>For flights to New York to Washington D. C., the airfare starts from $ 150</p>
+                     <p>For flights to New York to Myrtle Beach, the airfare starts from $ 213</p>
+                     <p>For flights to New York to Salt Lake City, the airfare starts from $ 411</p>
+                     <p>For flights to New York to Seattle, the airfare starts from $ 548</p>
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-12 mb-4">
+                  <div class="prz-box bg-light around p-3 h-100">
+                     <p><strong>Cheapest business class airfares of Hawaiian Airways for different locations:</strong></p>
+                     <p>For flights to New York to Chicago, the airfare starts from $ 209</p>
+                     <p>For flights to New York to Miami, the airfare starts from $ 255</p>
+                     <p>For flights to New York to Hawaii, the airfare starts from $ 1,096</p>
+                     <p>For flights to New York to Las Vegas, the airfare starts from $ 452</p>
+                     <p>For flights to New York to Los Angeles, the airfare starts from $ 594</p>
+                     <p>For flights to New York to Denver, the airfare starts from $ 471</p>
+                     <p>For flights to New York to Dallas, the airfare starts from $ 349</p>
+                     <p>For flights to New York to Washington D. C., the airfare starts from $ 162</p>
+                     <p>For flights to New York to Myrtle Beach, the airfare starts from $ 229</p>
+                     <p>For flights to New York to Salt Lake City, the airfare starts from $ 399</p>
+                     <p>For flights to New York to Seattle, the airfare starts from $ 449</p>
+                  </div>
+               </div>
+               <div class="col-md-12 col-12 mb-4">
+                  <h4>**Note - Prices may differ while actual booking.</h4>
+               </div>
+            </div><!--/row-->
+         </div>
+      </section><!--/content-box-->
+
+
+      <!-- footer -->
+      <footer>
+         <div id="contact" class="footer">
+            <div class="container">
+               <div class="row pdn-top-30">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                     <ul class="location_icon">
+                        <li> <a href="#"><img src="{% static 'demo/icon/facebook.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/Twitter.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/linkedin.png'%}"></a></li>
+                        <li> <a href="#"><img src="{% static 'demo/icon/instagram.png'%}"></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>CONTACT US</h3>
+                        <span>30 N. Gould St.<br>
+                        Sheridan, WY, 82801<br>
+                        (888) 905-8260</span>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>ADDITIONAL LINKS</h3>
+                        <ul class="link">
+                           <li> <a href="#">About us</a></li>
+                           <li> <a href="#">Terms and conditions</a></li>
+                           <li> <a href="#"> Privacy policy</a></li>
+                           <li> <a href="#">News</a></li>
+                           <li> <a href="#"> Contact us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3> Contact</h3>
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <input class="Newsletter" placeholder="Name" type="text">
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <input class="Newsletter" placeholder="Email" type="text">
+                           </div>
+                           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                              <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
+                           </div>
+                        </div>
+                        <button class="Subscribe">Submit</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <p>Copyright 2022 All Right Reserved By <a href="#">CheapFlightsFirst LLC</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+		<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<!-- date-picker -->
+	  
+      <script src="{% static 'demo/js/jquery.min.js'%}"></script>
+      <script src="{% static 'demo/js/popper.min.js'%}"></script>
+      <script src="{% static 'demo/js/bootstrap.bundle.min.js'%}"></script>
+      <script src="{% static 'demo/js/jquery-3.0.0.min.js'%}"></script>
+      <script src="{% static 'demo/js/plugin.js'%}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'demo/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+      <script src="{% static 'demo/js/custom.js'%}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'demo/js/owl.carousel.js'%}"></script>
+      <script>
+         $(document).ready(function() {
+           var owl = $('.owl-carousel');
+           owl.owlCarousel({
+             margin: 10,
+             nav: true,
+             loop: true,
+             responsive: {
+               0: {
+                 items: 1
+               },
+               600: {
+                 items: 2
+               },
+               1000: {
+                 items: 3
+               }
+             }
+           })
+         })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $("#form_id").on("submit", function (e) {
+        e.preventDefault(); //stop submit event
+        var self = $(this);
+        var originGiven = $("#inputOrigin").val();
+        $("#inputOrigin").val(originGiven.slice(0,3));
+        var destinationGiven = $("#inputDestination").val();
+        $("#inputDestination").val(destinationGiven.slice(0,3));
+        $("#form_id").off("submit");
+        self.submit();
+    });
+    </script>
+	
+	<script>
+	 $(function() {
+		$( "#idDeparturedate" ).datepicker({
+		   appendText:"(dd-mm-yy)",
+			dateFormat:"dd-mm-yy"
+		});
+	 $(function() {
+		$( "#idReturndate" ).datepicker();
+		appendText:"(dd-mm-yy)",
+		dateFormat:"dd-mm-yy"
+	 });
+  </script>
+	
+     
+   </body>
+   
+</html>
