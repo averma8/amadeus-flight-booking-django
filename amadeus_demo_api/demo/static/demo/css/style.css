@@ -2328,3 +2328,42 @@ span.ui-icon.ui-icon-circle-triangle-e:before {
     transform: rotate(130deg) !important;
 }
 /*--------custom calendar--------*/
+ul.list li {
+    list-style: disc;
+}
+/*--accordian---*/
+.accordions {
+    background-color: #f1f5f4;
+    color: #2a2a2a;
+    cursor: pointer;
+    padding: 8px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.actives, .accordions:hover {
+  background-color: #e3e3e3;
+}
+.panels {
+  padding: 0px 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.table-box {
+     max-height: 400px;
+     overflow: auto;
+}
+ul.content-heading li a {
+    font-size: 13px;
+    font-weight: 300;
+}
+.dropdown-menu.show a {
+    color: #0787a2;
+}
+/*--/accordian---*/

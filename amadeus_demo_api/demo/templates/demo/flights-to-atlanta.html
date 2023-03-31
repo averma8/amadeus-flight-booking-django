@@ -13,6 +13,8 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	  
 		<!-- datepicker css -->
 	   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
@@ -102,8 +104,31 @@
                               <ul class="menu-area-main">
                                  <li class="active"> <a href="#">Home</a> </li>
                                  <li> <a href="#about">About</a> </li>
-                                 <li><a href="#travel">Travel</a></li>
-                                 <li><a href="#blog">Blog</a></li>
+                                 <li class="nav-item dropdown">
+                                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Routes</a>
+                                   <div class="dropdown-menu">
+                                     <a class="dropdown-item" href="#">Flights From Houston To Las Vegas</a>
+                                   </div>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Destination</a>
+                                   <div class="dropdown-menu">
+                                     <a class="dropdown-item" href="flights-to-atlanta.html">Flights To Atlanta</a>
+                                     <a class="dropdown-item" href="lax-to-jfk.html">LAX to JFK</a>
+                                   </div>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Book a Flight</a>
+                                   <div class="dropdown-menu">
+                                     <a class="dropdown-item" href="how-can-you-book-cheap-business-class-flights.html">How To Book Cheap Business Class Flight?</a>
+                                   </div>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Travel Guide</a>
+                                   <div class="dropdown-menu">
+                                     <a class="dropdown-item" href="#">Black Friday Sale</a>
+                                   </div>
+                                 </li>
                                  <li><a href="#contact">Contact Us</a></li>
                               </ul>
                            </nav>
@@ -128,20 +153,55 @@
          </div>
 		</section>
 
+      <section class="table-of-content pt-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-12">
+                  <div class="accordion-box bg-light">
+                     <button class="accordions">Table of Contents <i class="fa fa-list fa-lg float-right mt-2"></i></button>
+                     <div class="panels">
+                       <div class="table-box p-3 mb-3">
+                          <ul class="content-heading">
+                             <li><a href="#Board-your-flight-to-Atlanta">1. Board your flight to Atlanta</a></li>
+                             <li>
+                                <ul class="content-heading ml-4">
+                                   <li><a href="#Airports-in-Atlanta">1.1. Airports in Atlanta</a></li>
+                                   <li><a href="#Airlines-that-offer-flights-to-Atlanta">1.2. Airlines that offer flights to Atlanta</a></li>
+
+                                   <li><a href="#Flights-to-Atlanta">1.3. Flights to Atlanta</a>
+                                       <ul class="content-heading ml-4">
+                                         <li><a href="#Tourist-attractions-in-Atlanta">1.3.1. Tourist attractions in Atlanta</a></li>
+                                         <li><a href="#Must-try-these-dishes-in-Atlanta">1.3.2. Must try these dishes in Atlanta</a></li>
+                                         <li><a href="#Souvenirs-you-can-buy-in-Atlanta">1.3.3. Souvenirs you can buy in Atlanta</a></li>
+                                         <li><a href="#Beaches-near-Atlanta">1.3.4. Beaches near Atlanta</a></li>
+                                         <li><a href="#Hiking-trails-in-Atlanta">1.3.5 Hiking trails in Atlanta</a></li>
+                                         <li><a href="#Affordable-accommodation-in-Atlanta">1.3.6 Affordable accommodation in Atlanta</a></li>
+                                      </ul>
+                                   </li>
+                                   <!-- <li><a href="#">text</a></li> -->
+                                </ul>
+                             </li>
+                          </ul>
+                       </div>
+                     </div>
+                  </div><!--/accordion-box-->
+               </div>
+            </div>
+         </div>
+      </section>
       
       <section class="content-box pt-5">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1>Flights to Atlanta</h1>
-                  <h2>Board your flight to Atlanta</h2>
+                  <h2 id="Board-your-flight-to-Atlanta">Board your flight to Atlanta</h2>
                   <p>Atlanta city is the state capital of Georgia in the United States. It is the United States' ninth-largest metropolitan region and is the 38th most populous city in the United States. Atlanta is also known as “City of Trees”.</p>
                   <p>The unique thing about Atlanta is that is rich in man-made and nature structures. You can see stunning, towering skylines, as well as rich, green greenery and vibrant flora. The tourist spots that Atlanta is known for are; Millennium Gate Museum at Atlantic Station, National Center for Civil and Human Rights, College Football Hall of Fame and Trap Music Museum.</p>
                   <p>Expected budget to travel in Atlanta can be $136 per day. Your budget can go up or down according to your lifestyle and spending nature.</p>
                   <p>Best ways to get around the Atlanta without owning your own vehicle are: Atlanta Checker Cab, Yellow Cab of Atlanta, Uber Cab, Lyft Cab, Rented Car, MARTA - Rail, MARTA – Bus and Streetcar. You can choose your conveyance according to your comfort and budget.</p>
                   <p>Best Time to visit Atlanta is from March to May, around this time the weather is mild and great to enjoy outdoor activities. Cheapest month to book flights to is August.</p>
 
-                  <h3>Airports in Atlanta</h3>
+                  <h3 id="Airports-in-Atlanta">Airports in Atlanta</h3>
                   <p>The major airport that serves the city is <strong> Hartsfield–Jackson Atlanta International Airport (ATL). </strong> There are more airports in the area that you can also consider, here is the list:</p>
 
                   <ul class="list pl-4 mb-3 mt-3">
@@ -156,7 +216,7 @@
                      <li>Atlanta Regional Airport, Atlanta / Peachtree City (FFC)</li>
                   </ul>
 
-                  <h3>Airlines that offer flights to Atlanta</h3>
+                  <h3 id="Airlines-that-offer-flights-to-Atlanta">Airlines that offer flights to Atlanta</h3>
                   <p>Here are the best and comfortable airlines that serve the city:</p>
                   <ul class="list pl-5 mb-3 mt-3">
                      <li>American Airlines</li>
@@ -172,13 +232,13 @@
 
             <div class="row">
                <div class="col-md-12 col-12">
-                  <h3>Flights to Atlanta</h3>
+                  <h3 id="Flights-to-Atlanta">Flights to Atlanta</h3>
                   <p>There are many airlines that offer flights to Atlanta from almost every place in United States of America.</p>
                   <p>For reference below we have given some of the most routes taken from major places in United States to Atlanta; along with their estimated prices from good, comfortable and affordable airlines:</p>
                </div>
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from New York:</h4>
+                     <p><strong>Flights to Atlanta from New York:</strong></p>
                      <p>American Airlines – price starts from $ 77</p>
                      <p>Delta Airlines – price starts from $ 128</p>
                      <p>United Airlines – price starts from $ 46</p>
@@ -189,7 +249,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Chicago:</h4>
+                     <p><strong>Flights to Atlanta from Chicago:</strong></p>
                      <p>American Airlines – price starts from $ 112</p>
                      <p>Delta Airlines – price starts from $ 104</p>
                      <p>United Airlines – price starts from $ 129</p>
@@ -199,7 +259,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Denver:</h4>
+                     <p><strong>Flights to Atlanta from Denver:</strong></p>
                      <p>American Airlines – price starts from $ 188</p>
                      <p>Delta Airlines – price starts from $ 149</p>
                      <p>United Airlines – price starts from $ 238</p>
@@ -210,7 +270,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Los Angeles:</h4>
+                     <p><strong>Flights to Atlanta from Los Angeles:</strong></p>
                      <p>American Airlines – price starts from $ 270</p>
                      <p>Delta Airlines – price starts from $ 310</p>
                      <p>United Airlines – price starts from $ 270</p>
@@ -221,7 +281,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Miami:</h4>
+                     <p><strong>Flights to Atlanta from Miami:</strong></p>
                      <p>American Airlines – price starts from $ 111</p>
                      <p>Delta Airlines – price starts from $ 109</p>
                      <p>United Airlines – price starts from $ 155</p>
@@ -232,7 +292,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Boston:</h4>
+                     <p><strong>Flights to Atlanta from Boston:</strong></p>
                      <p>American Airlines – price starts from $ 147</p>
                      <p>Delta Airlines – price starts from $ 149</p>
                      <p>United Airlines – price starts from $ 105</p>
@@ -243,7 +303,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Nashville:</h4>
+                     <p><strong>Flights to Atlanta from Nashville:</strong></p>
                      <p>American Airlines – price starts from $ 160</p>
                      <p>Delta Airlines – price starts from $ 152</p>
                      <p>United Airlines – price starts from $ 120</p>
@@ -254,7 +314,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Las Vegas:</h4>
+                     <p><strong>Flights to Atlanta from Las Vegas:</strong></p>
                      <p>American Airlines – price starts from $ 308</p>
                      <p>Delta Airlines – price starts from $ 299</p>
                      <p>United Airlines – price starts from $ 290</p>
@@ -265,7 +325,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Dallas:</h4>
+                     <p><strong>Flights to Atlanta from Dallas:</strong></p>
                      <p>American Airlines – price starts from $ 147</p>
                      <p>Delta Airlines – price starts from $ 139</p>
                      <p>United Airlines – price starts from $ 212</p>
@@ -276,7 +336,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Seattle:</h4>
+                     <p><strong>Flights to Atlanta from Seattle:</strong></p>
                      <p>American Airlines – price starts from $ 300</p>
                      <p>Delta Airlines – price starts from $ 409</p>
                      <p>United Airlines – price starts from $ 371</p>
@@ -285,7 +345,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Washington D. C.:</h4>
+                     <p><strong>Flights to Atlanta from Washington D. C.:</strong></p>
                      <p>American Airlines – price starts from $ 129</p>
                      <p>Delta Airlines – price starts from $ 119</p>
                      <p>United Airlines – price starts from $ 129</p>
@@ -296,7 +356,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Detroit:</h4>
+                     <p><strong>Flights to Atlanta from Detroit:</strong></p>
                      <p>American Airlines – price starts from $ 181</p>
                      <p>Delta Airlines – price starts from $ 288</p>
                      <p>United Airlines – price starts from $ 182</p>
@@ -307,7 +367,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Charlotte:</h4>
+                     <p><strong>Flights to Atlanta from Charlotte:</strong></p>
                      <p>American Airlines – price starts from $ 279</p>
                      <p>Delta Airlines – price starts from $ 348</p>
                      <p>United Airlines – price starts from $ 252</p>
@@ -315,7 +375,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Phoenix:</h4>
+                     <p><strong>Flights to Atlanta from Phoenix:</strong></p>
                      <p>American Airlines – price starts from $ 281</p>
                      <p>Delta Airlines – price starts from $ 382</p>
                      <p>United Airlines – price starts from $ 429</p>
@@ -326,7 +386,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Alaska:</h4>
+                     <p><strong>Flights to Atlanta from Alaska:</strong></p>
                      <p>American Airlines – price starts from $ 524</p>
                      <p>Delta Airlines – price starts from $ 402</p>
                      <p>United Airlines – price starts from $ 303</p>
@@ -335,7 +395,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Portland:</h4>
+                     <p><strong>Flights to Atlanta from Portland:</strong></p>
                      <p>American Airlines – price starts from $ 358</p>
                      <p>Delta Airlines – price starts from $ 322</p>
                      <p>United Airlines – price starts from $ 358</p>
@@ -346,7 +406,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from New Orleans:</h4>
+                     <p><strong>Flights to Atlanta from New Orleans:</strong></p>
                      <p>American Airlines – price starts from $ 209</p>
                      <p>Delta Airlines – price starts from $ 249</p>
                      <p>United Airlines – price starts from $ 322</p>
@@ -356,7 +416,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from San Francisco:</h4>
+                     <p><strong>Flights to Atlanta from San Francisco:</strong></p>
                      <p>American Airlines – price starts from $ 299</p>
                      <p>Delta Airlines – price starts from $ 283</p>
                      <p>United Airlines – price starts from $ 270</p>
@@ -367,7 +427,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Philadelphia:</h4>
+                     <p><strong>Flights to Atlanta from Philadelphia:</strong></p>
                      <p>American Airlines – price starts from $ 117</p>
                      <p>Delta Airlines – price starts from $ 199</p>
                      <p>United Airlines – price starts from $ 200</p>
@@ -378,7 +438,7 @@
                </div><!--/prz-box-->
                <div class="col-md-4 col-12 mb-4">
                   <div class="prz-box bg-light around p-3 h-100">
-                     <h4>Flights to Atlanta from Hawaii:</h4>
+                     <p><strong>Flights to Atlanta from Hawaii:</strong></p>
                      <p>American Airlines – price starts from $ 486</p>
                      <p>Delta Airlines – price starts from $ 458</p>
                      <p>United Airlines – price starts from $ 469</p>
@@ -390,7 +450,7 @@
                <div class="col-md-12 col-12">
                   <h4>**Note - Prices may differ while actual booking.</h4>
 
-                  <h4>Tourist attractions in Atlanta</h4>
+                  <h4 id="Tourist-attractions-in-Atlanta">Tourist attractions in Atlanta</h4>
                   <p>There is so much that you can see in Atlanta, many incredible and unique places. Here is the list of tourist attractions of the city:</p>
 
                   <ul class="list pl-4 mb-3 mt-3">
@@ -420,7 +480,7 @@
                      <li>Dancing Fountains at Centennial Olympic Park</li>
                   </ul>
 
-                  <h4>Must try these dishes in Atlanta</h4>
+                  <h4 id="Must-try-these-dishes-in-Atlanta">Must try these dishes in Atlanta</h4>
                   <p>The best part about any trip is visiting incredible places and try new food dishes. So as for trying food dishes, below is the list of must try food in Atlanta:</p>
                   <ul class="list pl-4 mb-3 mt-3">
                      <li>Pizza at Antico</li>
@@ -453,7 +513,7 @@
                      <li>Maple Bacon Cheddar Doughnut at Sublime Doughnuts</li>
                   </ul>
 
-                  <h4>Souvenirs you can buy in Atlanta</h4>
+                  <h4 id="Souvenirs-you-can-buy-in-Atlanta">Souvenirs you can buy in Atlanta</h4>
                   <p>Here are some things that you can buy in Atlanta as gifts or souvenirs:</p>
                   <ul>
                      <li>Pickled Peaches</li>
@@ -468,7 +528,7 @@
                      <li>CACAO Atlanta Chocolate Company Limited-Edition Chocolate</li>
                   </ul>
 
-                  <h4>Beaches near Atlanta</h4>
+                  <h4 id="Beaches-near-Atlanta">Beaches near Atlanta</h4>
                   <p>The city does not have beaches, but to enjoy beach and its associated activities there are some beautiful beaches near Atlanta where you can go. Below are the names of some stunning beaches near Atlanta:</p>
                   <ul class="list pl-4 mb-3 mt-3">
                      <li>Cauble Park — Acworth</li>
@@ -488,7 +548,7 @@
                      <li>St. George Island State Park — St. George Island</li>
                   </ul>
 
-                  <h4>Hiking trails in Atlanta</h4>
+                  <h4 id="Hiking-trails-in-Atlanta">Hiking trails in Atlanta</h4>
                   <p>Atlanta has mountains and peaks which means it has some amazing hiking trails as well. All these trails have jaw dropping scenic views and adventurous activities. Here is the list of best hiking trails in the city:</p>
                   <ul class="list pl-4 mb-3 mt-3">
                      <li>Blood Mountain</li>
@@ -507,7 +567,7 @@
                      <li>Stone Mountain Walk Up & Cherokee Trail Loop</li>
                   </ul>
 
-                  <h4>Affordable accommodation in Atlanta</h4>
+                  <h4 id="Affordable-accommodation-in-Atlanta">Affordable accommodation in Atlanta</h4>
                   <p>Sometimes finding an affordable accommodation can be tricky, so we have some good hotel names for you with their approximate prices. Here are the hotels that you can consider for stay when you are in the city:</p>
                   <ul class="list pl-4 mb-3 mt-3">
                      <li>Rodeway Inn – Price starts from $ 52</li>
@@ -546,7 +606,6 @@
                   <h5>** Note - Prices may differ while actual booking.</h5>
                </div>
             </div><!--/row-->
-
          </div>
       </section><!--/content-box-->
 	
@@ -663,7 +722,7 @@
     </script>
 	
 	<script>
-	 $(function() {
+	 /*$(function() {
 		$( "#idDeparturedate" ).datepicker({
 		   appendText:"(dd-mm-yy)",
 			dateFormat:"dd-mm-yy"
@@ -672,10 +731,25 @@
 		$( "#idReturndate" ).datepicker();
 		appendText:"(dd-mm-yy)",
 		dateFormat:"dd-mm-yy"
-	 });
+	 });*/
   </script>
-	
+
+  <script>
+      var acc = document.getElementsByClassName("accordions");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("actives");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+   </script>
      
    </body>
-   
 </html>
