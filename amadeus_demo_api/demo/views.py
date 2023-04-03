@@ -187,6 +187,5 @@ def get_city_airport_list(data):
     result = list(dict.fromkeys(result))
     return json.dumps(result)
 
-def atlanta(request):
-    return render(request, "demo/flights-to-atlanta.html", {})
+
     
