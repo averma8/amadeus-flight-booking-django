@@ -188,12 +188,5 @@ def get_city_airport_list(data):
     return json.dumps(result)
 
 def atlanta(request):
- return render(request, "demo/flights-to-atlanta.html", {})
-    
-    
-def laxjfk(request):
- return render(request, "demo/lax-to-jfk.html", {})
-    
- def bookbusiness(request):
-  return render(request, "demo/how-can-you-book-cheap-business-class-flights.html", {})
+    return render(request, "demo/flights-to-atlanta.html", {})
     
