@@ -8,5 +8,5 @@ urlpatterns = [
     path('destination_airport_search/', views.destination_airport_search, name='destination_airport_search'),
     path('book_flight/<str:flight>/', views.book_flight, name='book_flight')
     
-     path('flights-to-atlanta', views.demo, name='flights-to-atlanta'),
+     path('flights-to-atlanta.html', views.demo, name='flights-to-atlanta'),
 ]
