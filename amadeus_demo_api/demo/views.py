@@ -186,3 +186,7 @@ def get_city_airport_list(data):
         result.append(data[i]["iataCode"] + ", " + data[i]["name"])
     result = list(dict.fromkeys(result))
     return json.dumps(result)
+
+def atlanta(request):
+
+    return render(request, "demo/flights-to-atlanta.html", {})
